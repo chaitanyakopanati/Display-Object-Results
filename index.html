@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Results</title>
+</head>
+<body>
+    <h1>Display Results</h1>
+    <span><b>Default results</b></span>
+    <div id="initialResults"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span><b>After updated results</b></span>
+    <div id="updatedResults" ></div>
+
+    <script>
+        const obj11= {
+            id : 1 ,
+            name : "chaitanya"
+        }
+
+        var obj12 ={...obj11}; 
+        var obj13 =  { ...obj11 };
+
+        document.getElementById('initialResults').innerHTML = `
+            <p>obj11: ${obj11.id,obj11.name}</p>
+            <p>obj12: ${obj12.id,obj12.name}</p>
+            <p>obj13: ${obj13.id,obj13.name}</p>
+        `;
+
+        obj11.name = "keyur";
+        
+
+        document.getElementById('updatedResults').innerHTML = `
+            <p>obj11: ${obj11.id,obj11.name}</p>
+            <p>obj12: ${obj11.id,obj11.name}</p>
+            <p>obj13: ${obj13.id,obj13.name}</p>
+        `;
+
+    </script>
+</body>
+</html>
+
+
+
+
